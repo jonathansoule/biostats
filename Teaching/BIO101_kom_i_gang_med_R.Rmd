@@ -97,13 +97,8 @@ Deretter skal vi åpne "prosjektet" og bli kjent med grensesnittet til RStudio.
 
 ## Installer R og RStudio
 
-Som UiB student får du tilgang til mange programvarer via [UiB Tredjepartsportalen](https://apps.uib.no){target="_blank"}.
-Der finner du både R og RStudio.
-Informasjon om hvordan du får tilgang til portalen finner du [her på Mitt UiB](https://mitt.uib.no/courses/22090){target="_blank"}.
-Søk etter de programvarene og installer dem på din maskin.  
-
-Alternativt kan du laste ned R direkte fra nettsiden til [The Comprehensive R Archive Network](https://cloud.r-project.org/){target="_blank"} og RStudio fra [RStudio sin nettside](https://rstudio.com/products/rstudio/download/#download){target="_blank"}. 
-Pass på at du velger den versjonen som passer din maskin.
+Programvarene kan du laste ned R direkte fra nettsiden til [The Comprehensive R Archive Network](https://cloud.r-project.org/){target="_blank"} og RStudio fra [RStudio sin nettside](https://rstudio.com/products/rstudio/download/#download){target="_blank"}. 
+Pass på at du velger den versjonen som passer din maskin (Windows, MacOS, Linux, etc).
 
 ## Last ned filene
 
@@ -209,17 +204,20 @@ knitr::include_graphics("Pics/RStudio-files-menu.png")
 R-pakker (altså "packages") er utvidelser som legger til funksjoner og funksjonaliteter i R.
 Noen pakker gir muligheten til å rydde datasett, noen lar deg tegne fine plotter, osv.
 
-I den øvelsen trenger vi pakken `tidyverse`. 
-`tidyverse` installeres via konsolen ved hjelp av funksjonen `install.packages()`. Kopiér og lim inn den følgende linjen direkte i konsolen, og trykk `Enter`:
+I den øvelsen trenger vi pakkene `tidyverse`, `learnr`, `shiny`and `rmarkdown`. 
+De installeres via konsolen ved hjelp av funksjonen `install.packages()`. Kopiér og lim inn den følgende linjen direkte i konsolen, og trykk `Enter`:
 ```{r install-packages, echo = TRUE, eval=FALSE}
-install.packages("tidyverse")
+install.packages(c("tidyverse", "learnr", "shiny", "rmarkdown"))
 ```
 
 `install.packages()` tar seg av å nedlaste og installere pakker i R/RStudio.
-Dessuten bruker du funksjonen `library()` for å aktivere de installerte pakkene nå de trenges.
+Dessuten bruker du funksjonen `library()` for å aktivere de installerte pakkene når de trenges.
 Da kan du kopiere og lime inn denne koden i konsolen:
 ```{r activate-packages, echo = TRUE, eval=FALSE}
 library(tidyverse)
+library(learnr)
+library(shiny)
+library(rmarkdown)
 ```
 
 
@@ -379,7 +377,7 @@ NB: pass på å ikke fjerne ` ``` ` i slutten av chunk-en!
 
 ### Introduksjon
 
-Skriv en innledning i ett eller to avsnitt om hva studien handler om.
+Skriv en innledning i to eller tre setninger om hva studien handler om.
 Hva er hovedspørsmålet til denne studien? Hva er forventningene?
 
 Trenger du hjelp med introduskjonen, gå til [denne bioSKRIV-siden](https://bioskriv.w.uib.no/struktur-imrod/#introduksjon){target="_blank"}.  
